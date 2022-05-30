@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "e812b903-26f6-46bb-86e4-066b0bab07f3",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"123\",\n    \"firstName\": \"Vadzim\",\n    \"lastName\": \"Filipovich\",\n    \"phone\": \"+375297439850\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Tokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjA0LCJleHAiOjE2NTQ1NjU2MDR9.7-6IuXVsexuRob6a8m25dHc8ZADUjKNZlKt-YEbrCIU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/author/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photoURL\": \"https://th-thumbnailer.cdn-si-edu.com/ThjDfrM6NPPSa8L9N2tnzAKlhKk=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/89/5f/895f216f-ec87-4cf1-857a-6e3e4a4eab3f/bt001589.jpg\",\n    \"name\": \"Astronaut\",\n    \"description\": \"Right from da space\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/author/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/author/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/book/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorId\": 2,\n    \"name\": \"Write way to write diploma\",\n    \"description\": \"Hah, nevermind\",\n    \"numPages\": 12,\n    \"cover\": \"https://i.pinimg.com/originals/30/c1/1d/30c11d3ccf4d95eac82d7ca994b72427.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/book/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Library",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/library",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"library"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add To Library",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": 2,\n    \"status\": \"READ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/library/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"library",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove From Library",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"libraryLineId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/library/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"library",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": 2,\n    \"comment\": \"Nice Book 12\",\n    \"rating\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/review/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"review",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6MSwiaWF0IjoxNjUzOTI1NjQ1LCJleHAiOjE2NTQwODU2NDV9.JhIQ_m-vskKlnHYzubF28oj4Myy4ykIMTChrgi3vlXA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
